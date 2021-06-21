@@ -37,7 +37,9 @@ const InputForm: React.FC = () => {
                     })
 
                     setCurrencyOptions(newCurrencyOptions);
-                });
+                }).catch(ignore => {
+                    console.log("not sure what should i do here, what is standard")
+            })
         };
 
         fetchCurrencies();

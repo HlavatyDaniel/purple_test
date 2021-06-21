@@ -17,17 +17,23 @@ const Statistics: React.FC = () => {
             axios.get('http://localhost:8080/statistics?specifyStatistic=favoriteDestination')
                 .then(response => {
                     setFavoriteDestination(response.data.result)
-                })
+                }).catch(ignore => {
+                    console.log("not sure what should i do here, what is standard")
+            })
 
             axios.get('http://localhost:8080/statistics?specifyStatistic=amountConverted')
                 .then(response => {
                     setAmountConverted(Number(Number(response.data.result).toFixed(2)))
-                })
+                }).catch(ignore => {
+                    console.log("not sure what should i do here, what is standard")
+            })
 
             axios.get('http://localhost:8080/statistics?specifyStatistic=conversionCount')
                 .then(response => {
                     setConversionsCount(response.data.result);
-                })
+                }).catch(ignore => {
+                    console.log("not sure what should i do here, what is standard")
+            })
         }
         fetchStatistics()
     }, []);

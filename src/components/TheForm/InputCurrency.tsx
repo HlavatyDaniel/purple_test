@@ -1,6 +1,6 @@
 import React from "react"
 
-import styles from './InputCurrency.module.scss'
+import styles from "./InputCurrency.module.scss"
 
 import CurrencyInput from "react-currency-input-field";
 
